@@ -5,26 +5,15 @@ int main()
 {
 	int choice;
 	int a, b, c;
-	int sa = sin(a);
-	int ca = cos(a);
-	int ta = tan(a);
-	int sb = sin(b);
-	int cb = cos(b);
-	int tb = tan(b);
-	int genre;
 	int x1;
 	int x2;
 	int y1;
 	int back;
 	int type;
+	float d, f;
 	double delta;
-	printf("\n***********************\n1- calculatrice normale\n2- calculatrice scientifique\n***********************\n");
-	scanf("%d", &type);
-	switch (type)
-	{
-		case 1:
 			start:
-				printf("\n***********************\n1- Addition\n2- Subtraction\n3- multiplication\n4- Division\n5- Quadratic equation\n***********************\n");
+				printf("\n***********************\n1- Addition\n2- Subtraction\n3- multiplication\n4- Division\n5- Quadratic equation\n6- Sin - Cos - Tan\n***********************\n");
 			scanf("%d", &choice);
 			switch (choice)
 			{
@@ -155,9 +144,30 @@ int main()
 							goto div;
 							break;
 					};
+					case 6:
+                            printf("\n1- SIN \n2- COS\n3- TAN\n");
+    scanf("%d", &type);
+    switch(type){
+    case 1:
+        printf("\nEnter The number: \n");
+        scanf("%f", &d);
+        f = sin(d);
+        printf("\nThe result is: %f\n", f);
+    break;
+    case 2:
+        printf("\nEnter The number: \n");
+        scanf("%f", &d);
+        f = cos(d);
+        printf("\nThe result is: %f\n", f);
+    break;
+    case 3:
+        printf("\nEnter The number: \n");
+        scanf("%f", &d);
+        f = tan(d);
+        printf("\nThe result is: %f\n", f);
+    break;
+                            };
+                            break;
 			}
-
-			break;
-	};
 	return 0;
 }
